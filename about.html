@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Garritas al Cielo</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 w-full z-50 py-4 glass-header">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-3xl">🐾</span>
+                <span class="font-bold text-xl tracking-tight text-celeste">GARRITAS <span class="text-verde">AL CIELO</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="hover:text-celeste transition">Inicio</a>
+                <a href="about.html" class="text-celeste font-bold">Nosotros</a>
+                <a href="services.html" class="hover:text-celeste transition">Servicios</a>
+                <a href="services.html#planes" class="hover:text-celeste transition">Planes</a>
+                <a href="contact.html" class="hover:text-celeste transition">Contacto</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute top-full left-0 w-full shadow-xl">
+            <nav class="flex flex-col space-y-4 font-medium uppercase text-sm tracking-wider">
+                <a href="index.html">Inicio</a>
+                <a href="about.html" class="text-celeste">Nosotros</a>
+                <a href="services.html">Servicios</a>
+                <a href="services.html#planes">Planes</a>
+                <a href="contact.html">Contacto</a>
+                <a href="https://wa.me/+569XXXXXXXX" target="_blank" class="bg-verde text-white py-3 text-center rounded-lg wa-btn">WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image Side -->
+                <div class="w-full lg:w-1/2 fade-in">
+                    <img src="img/support.png" alt="Misión y Visión" class="rounded-[2.5rem] shadow-2xl w-full border-8 border-white">
+                </div>
+                
+                <!-- Text Side -->
+                <div class="w-full lg:w-1/2 fade-in">
+                    <span class="text-verde font-bold tracking-widest uppercase text-sm">Nuestra Misión</span>
+                    <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-8 text-gray-900 leading-tight">Servicio de Corazón <br> en <span class="text-celeste">Calama.</span></h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        En Garritas al Cielo, no solo ofrecemos un servicio técnico; proporcionamos un refugio de paz y acompañamiento para las familias de Calama que enfrentan la pérdida de un compañero animal. Nuestra esencia nace del amor profundo hacia las mascotas y la comprensión del vínculo eterno con sus humanos.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-celeste-light p-4 rounded-2xl mr-4">
+                                <i class="fas fa-heart text-celeste text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2">Misión</h3>
+                                <p class="text-gray-500">Brindar un adiós digno, respetuoso y amoroso a las mascotas, integrando el bienestar emocional de sus dueños a través de una atención personalizada y profesional.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-emerald-50 p-4 rounded-2xl mr-4">
+                                <i class="fas fa-eye text-verde text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2">Visión</h3>
+                                <p class="text-gray-500">Ser reconocidos en toda la región de Antofagasta como el referente de excelencia y humanidad en servicios funerarios para mascotas, promoviendo una cultura de respeto animal hasta el final de sus días.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-celeste text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 p-20 opacity-10">
+            <i class="fas fa-paw text-[20rem]"></i>
+        </div>
+        <div class="container mx-auto px-4 text-center mb-16 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestros Valores</h2>
+            <p class="text-blue-100 italic">Los pilares que sostienen cada uno de nuestros procesos.</p>
+        </div>
+        
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="text-center fade-in">
+                <div class="text-5xl mb-6">💖</div>
+                <h4 class="text-2xl font-bold mb-4">Empatía</h4>
+                <p class="text-blue-50">Sentimos tu dolor como propio y actuamos con la mayor delicadeza.</p>
+            </div>
+            <div class="text-center fade-in">
+                <div class="text-5xl mb-6">🕊️</div>
+                <h4 class="text-2xl font-bold mb-4">Integridad</h4>
+                <p class="text-blue-50">Transparencia absoluta en nuestros procesos de cremación individual.</p>
+            </div>
+            <div class="text-center fade-in">
+                <div class="text-5xl mb-6">🌿</div>
+                <h4 class="text-2xl font-bold mb-4">Respeto</h4>
+                <p class="text-blue-50">Honramos la vida de cada ser que pasa por nuestras manos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/+569XXXXXXXX" target="_blank" class="whatsapp-float wa-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-500">© 2026 Garritas al Cielo - Calama, Chile.</p>
+            <div class="mt-4">
+                <a href="index.html" class="text-celeste hover:underline">Volver al Inicio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

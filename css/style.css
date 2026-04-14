@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+    --celeste: #87CEEB;
+    --verde: #4CAF50;
+    --verde-dark: #388E3C;
+    --celeste-light: #E1F5FE;
+    --text-main: #2C3E50;
+    --text-muted: #7F8C8D;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-main);
+    background-color: #f9fbfc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Custom Utilities */
+.bg-celeste { background-color: var(--celeste); }
+.text-celeste { color: var(--celeste); }
+.bg-verde { background-color: var(--verde); }
+.text-verde { color: var(--verde); }
+
+.glass-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.btn-hover {
+    transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Custom Gradients */
+.grad-celeste-verde {
+    background: linear-gradient(135deg, var(--celeste) 0%, var(--verde) 100%);
+}
+
+.grad-soft {
+    background: linear-gradient(to bottom, var(--celeste-light) 0%, var(--white) 100%);
+}
+
+/* Gallery Hover */
+.gallery-item img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Card Styling */
+.card-premium {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(135, 206, 235, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-premium:hover {
+    border-color: var(--celeste);
+}
