@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios y Planes | Garritas al Cielo</title>
+    <meta name="description" content="Detalle de nuestros planes de cremación y servicios adicionales en Calama.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,31 +17,45 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Paw Container for Scroll Animation -->
+    <div class="paw-container" id="paws-container"></div>
+
     <!-- Header / Navbar -->
-    <header class="fixed top-0 w-full z-50 py-4 glass-header">
+    <header class="fixed top-0 w-full z-50 py-4 glass-header transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
                 <span class="text-3xl">🐾</span>
                 <span class="font-bold text-xl tracking-tight text-celeste">GARRITAS <span class="text-verde">AL CIELO</span></span>
             </a>
+            
+            <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-8 font-medium">
                 <a href="index.html" class="hover:text-celeste transition">Inicio</a>
                 <a href="about.html" class="hover:text-celeste transition">Nosotros</a>
-                <a href="services.html" class="text-celeste font-bold">Servicios</a>
-                <a href="#planes" class="hover:text-celeste transition">Planes</a>
+                <a href="services.html" class="text-celeste font-bold hover:text-celeste transition">Servicios</a>
+                <a href="services.html#planes" class="hover:text-celeste transition">Planes</a>
                 <a href="contact.html" class="hover:text-celeste transition">Contacto</a>
             </nav>
+
+            <a href="https://wa.me/+569XXXXXXXX" target="_blank"
+                class="hidden md:block bg-verde text-white px-6 py-2 rounded-full font-semibold btn-hover wa-btn">
+                WhatsApp <i class="fab fa-whatsapp ml-1"></i>
+            </a>
+
+            <!-- Mobile Menu Button -->
             <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute top-full left-0 w-full shadow-xl">
             <nav class="flex flex-col space-y-4 font-medium uppercase text-sm tracking-wider">
-                <a href="index.html">Inicio</a>
-                <a href="about.html">Nosotros</a>
+                <a href="index.html" class="hover:text-celeste">Inicio</a>
+                <a href="about.html" class="hover:text-celeste">Nosotros</a>
                 <a href="services.html" class="text-celeste">Servicios</a>
-                <a href="#planes">Planes</a>
-                <a href="contact.html">Contacto</a>
+                <a href="services.html#planes" class="hover:text-celeste">Planes</a>
+                <a href="contact.html" class="hover:text-celeste">Contacto</a>
                 <a href="https://wa.me/+569XXXXXXXX" target="_blank" class="bg-verde text-white py-3 text-center rounded-lg wa-btn">WhatsApp</a>
             </nav>
         </div>
@@ -96,65 +111,125 @@
     </section>
 
     <!-- Planes Section -->
-    <section id="planes" class="py-20 bg-gray-50">
+    <section id="planes" class="py-24 bg-gray-50 relative overflow-hidden">
         <div class="container mx-auto px-4 text-center mb-16 fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Planes diseñados con <span class="text-celeste">Amor</span></h2>
-            <p class="text-gray-600">Elige la opción que mejor se adapte a tu deseo de despedida.</p>
+            <span class="text-verde font-bold tracking-widest uppercase text-sm">Nuestros Planes</span>
+            <h2 class="text-3xl md:text-5xl mt-2 mb-6 text-gray-900">Una despedida según tu <span class="text-celeste">necesidad</span></h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                Cada compañero es único. Elige el plan que mejor refleje el amor y respeto que deseas brindar en su último viaje.
+            </p>
         </div>
-        
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Plan Mini Garritas -->
-            <div class="card-premium fade-in border-t-4 border-verde">
-                <h3 class="text-xl font-bold mb-2">Plan Mini Garritas</h3>
-                <p class="text-gray-400 text-sm mb-6">Ideal para mascotas pequeñas.</p>
-                <ul class="text-left space-y-3 mb-8 text-gray-600 text-sm">
-                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro en Calama</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Cremación Individual</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Urna de madera básica</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Certificado digital</li>
+
+        <!-- 4 Main Plans Grid -->
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center mb-16">
+            <!-- Plan Garritas al Cielo (Destacado) -->
+            <div class="card-premium fade-in border-t-4 border-celeste shadow-2xl relative bg-white transform transition-transform hover:scale-[1.03] flex flex-col items-center text-center p-6">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-celeste text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Plan Estrella</div>
+                <h3 class="text-2xl font-bold mb-2">Garritas al Cielo</h3>
+                <p class="text-gray-400 text-sm mb-6 pb-4 border-b border-gray-100 w-full">Nuestro servicio más completo.</p>
+                <ul class="text-left space-y-2 mb-8 text-gray-600 text-sm flex-grow">
+                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro veterinaria/domicilio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Traslado a planta</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Envío de foto del peso</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Proceso de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Recuperación de cenizas</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Certificado de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Placa nombre y epitafio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Ánfora ecológica</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Fotografía encuadrada</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Fotografía digital</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Botella recuerdo cabello</li>
+                    <li><i class="fas fa-info-circle text-celeste mr-2"></i> Video de ingreso <span class="text-xs text-gray-400">(opc)</span></li>
+                    <li><i class="fas fa-info-circle text-celeste mr-2"></i> Sala de despedida <span class="text-xs text-gray-400">(opc)</span></li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Acompañamiento duelo</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Entrega a domicilio</li>
                 </ul>
-                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Mini%20Garritas" target="_blank" class="block w-full bg-gray-100 text-gray-700 py-3 rounded-full font-bold hover:bg-verde hover:text-white transition wa-btn">Solicitar Info</a>
+                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Garritas%20al%20Cielo" target="_blank" class="w-fit bg-celeste text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-sky-600 transition wa-btn">Solicitar Información</a>
+            </div>
+
+            <!-- Plan Cielo -->
+            <div class="card-premium fade-in border-t-4 border-verde flex flex-col items-center text-center p-6">
+                <h3 class="text-2xl font-bold mb-2">Plan Cielo</h3>
+                <p class="text-gray-400 text-sm mb-6 pb-4 border-b border-gray-100 w-full">Opción solemne y profesional.</p>
+                <ul class="text-left space-y-2 mb-8 text-gray-600 text-sm flex-grow">
+                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro veterinaria/domicilio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Traslado a planta</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Envío de foto del peso</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Proceso de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Recuperación de cenizas</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Certificado de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Placa nombre y epitafio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Fotografía encuadrada</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Botella recuerdo cabello</li>
+                    <li><i class="fas fa-info-circle text-celeste mr-2"></i> Video de ingreso <span class="text-xs text-gray-400">(opc)</span></li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Entrega a domicilio</li>
+                    <li><i class="fas fa-info-circle text-celeste mr-2"></i> Sala despedida <span class="text-xs text-gray-400">(opc)</span></li>
+                </ul>
+                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Cielo" target="_blank" class="w-fit bg-gray-100 text-gray-700 px-8 py-3 rounded-full font-bold hover:bg-verde hover:text-white transition wa-btn">Solicitar Información</a>
             </div>
 
             <!-- Plan Garritas -->
-            <div class="card-premium fade-in border-t-4 border-celeste relative scale-105 shadow-2xl bg-white z-10">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-celeste text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Más Elegido</div>
-                <h3 class="text-xl font-bold mb-2">Plan Garritas</h3>
-                <p class="text-gray-400 text-sm mb-6">Nuestra opción más completa.</p>
-                <ul class="text-left space-y-3 mb-8 text-gray-600 text-sm">
-                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro 24/7</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Cremación Individual</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Urna personalizada</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Huella en arcilla 🐾</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Certificado impreso</li>
+            <div class="card-premium fade-in border-t-4 border-orange-400 flex flex-col items-center text-center p-6">
+                <h3 class="text-2xl font-bold mb-2">Plan Garritas</h3>
+                <p class="text-gray-400 text-sm mb-6 pb-4 border-b border-gray-100 w-full">Equilibrio precio y servicio.</p>
+                <ul class="text-left space-y-2 mb-8 text-gray-600 text-sm flex-grow">
+                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro veterinaria/domicilio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Traslado a planta</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Envío de foto del peso</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Proceso de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Recuperación de cenizas</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Certificado de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Placa nombre y epitafio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Ánfora ecológica</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Fotografía</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Entrega a domicilio</li>
                 </ul>
-                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Garritas" target="_blank" class="block w-full bg-celeste text-white py-3 rounded-full font-bold shadow-lg hover:bg-sky-600 transition wa-btn">Solicitar Info</a>
+                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Garritas" target="_blank" class="w-fit bg-gray-100 text-gray-700 px-8 py-3 rounded-full font-bold hover:bg-orange-400 hover:text-white transition wa-btn">Solicitar Información</a>
             </div>
 
-            <!-- Plan Garritas al Cielo -->
-            <div class="card-premium fade-in border-t-4 border-emerald-400">
-                <h3 class="text-xl font-bold mb-2">Plan Garritas al Cielo</h3>
-                <p class="text-gray-400 text-sm mb-6">Una despedida premium y solemne.</p>
-                <ul class="text-left space-y-3 mb-8 text-gray-600 text-sm">
-                    <li><i class="fas fa-check text-verde mr-2"></i> Todo el Plan Garritas</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Urna Premium de lujo</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Mini altar conmemorativo</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Video tributo</li>
+            <!-- Plan MiniGarritas -->
+            <div class="card-premium fade-in border-t-4 border-emerald-400 flex flex-col items-center text-center p-6">
+                <h3 class="text-2xl font-bold mb-2">MiniGarritas</h3>
+                <p class="text-gray-400 text-sm mb-6 pb-4 border-b border-gray-100 w-full">Premium para mascotas pequeñas.</p>
+                <ul class="text-left space-y-2 mb-8 text-gray-600 text-sm flex-grow">
+                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro veterinaria/domicilio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Traslado a planta</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Envío de foto del peso</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Proceso de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Recuperación de cenizas</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Certificado de cremación</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Placa nombre y epitafio</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Ánfora ecológica</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Fotografía encuadrada</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Fotografía digital</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Botella recuerdo cabello</li>
+                    <li><i class="fas fa-info-circle text-celeste mr-2"></i> Video de ingreso <span class="text-xs text-gray-400">(opc)</span></li>
+                    <li><i class="fas fa-info-circle text-celeste mr-2"></i> Sala de despedida <span class="text-xs text-gray-400">(opc)</span></li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Acompañamiento duelo</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Entrega a domicilio</li>
                 </ul>
-                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Garritas%20al%20Cielo" target="_blank" class="block w-full bg-gray-100 text-gray-700 py-3 rounded-full font-bold hover:bg-emerald-400 hover:text-white transition wa-btn">Solicitar Info</a>
+                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20MiniGarritas%20al%20Cielo" target="_blank" class="w-fit bg-gray-100 text-gray-700 px-8 py-3 rounded-full font-bold hover:bg-emerald-400 hover:text-white transition wa-btn">Solicitar Información</a>
             </div>
+        </div>
 
-            <!-- Plan Colectivo -->
-            <div class="card-premium fade-in border-t-4 border-gray-400">
-                <h3 class="text-xl font-bold mb-2">Plan Colectivo</h3>
-                <p class="text-gray-400 text-sm mb-6">Una opción solidaria y respetuosa.</p>
-                <ul class="text-left space-y-3 mb-8 text-gray-600 text-sm">
-                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro en Calama</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Cremación Comunitaria</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Cenizas en jardín memorial</li>
-                    <li><i class="fas fa-check text-verde mr-2"></i> Registro de despedida</li>
+        <!-- Plan Colectivo (Bottom Centered) -->
+        <div class="container mx-auto px-4 flex justify-center">
+            <div class="card-premium fade-in border-t-4 border-gray-400 w-full max-w-lg flex flex-col items-center text-center">
+                <h3 class="text-2xl font-bold mb-2">Plan Colectivo</h3>
+                <p class="text-gray-400 text-sm mb-6 pb-4 border-b border-gray-100 w-full">Una opción digna, solidaria y económica.</p>
+                
+                <p class="text-gray-600 text-sm mb-8 leading-relaxed">
+                    Cremación compartida con otros compañeros. Es una opción digna y económica donde el proceso se realiza de forma conjunta. Bajo esta modalidad no se realiza la recuperación de cenizas de forma individual.
+                </p>
+
+                <ul class="text-left space-y-3 text-gray-600 text-sm mb-10 w-full max-w-xs mx-auto">
+                    <li><i class="fas fa-check text-verde mr-2"></i> Retiro en toda Calama</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Traslado respetuoso a planta</li>
+                    <li><i class="fas fa-check text-verde mr-2"></i> Cremación Colectiva</li>
+                    <li><i class="fas fa-times text-red-400 mr-2"></i> Sin recuperación de cenizas</li>
                 </ul>
-                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Colectivo" target="_blank" class="block w-full bg-gray-100 text-gray-700 py-3 rounded-full font-bold hover:bg-gray-700 hover:text-white transition wa-btn">Solicitar Info</a>
+
+                <a href="https://wa.me/+569XXXXXXXX?text=Hola,%20quisiera%20información%20sobre%20el%20Plan%20Colectivo" target="_blank" class="w-fit bg-gray-900 text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition wa-btn">Solicitar Información Colectiva</a>
             </div>
         </div>
     </section>
@@ -165,18 +240,69 @@
     </a>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex items-center justify-center space-x-2 mb-8">
-                <span class="text-3xl">🐾</span>
-                <span class="font-bold text-xl tracking-tight text-white">GARRITAS <span class="text-verde">AL CIELO</span></span>
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12 mb-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center space-x-2 mb-6">
+                    <span class="text-3xl">🐾</span>
+                    <span class="font-bold text-xl tracking-tight text-white">GARRITAS <span class="text-verde">AL
+                            CIELO</span></span>
+                </div>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Ubicados en Calama, Chile. Brindamos paz y amor en el último adiós de quienes más amaste. Un
+                    servicio de corazón para seres especiales.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/garritasalcielo" target="_blank"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-celeste transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@garritas.al.cielo" target="_blank"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
             </div>
-            <p class="text-gray-500 mb-8">© 2026 Calama, Chile. Respeto y amor en cada despedida.</p>
-            <div class="flex justify-center space-x-6 text-gray-400">
-                <a href="https://www.instagram.com/garritasalcielo" target="_blank" class="hover:text-celeste"><i class="fab fa-instagram text-2xl"></i></a>
-                <a href="https://www.tiktok.com/@garritas.al.cielo" target="_blank" class="hover:text-verde"><i class="fab fa-tiktok text-2xl"></i></a>
-                <a href="index.html" class="hover:text-white">Volver al Inicio</a>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6">Navegación</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="index.html" class="hover:text-celeste transition">Inicio</a></li>
+                    <li><a href="about.html" class="hover:text-celeste transition">Sobre Nosotros</a></li>
+                    <li><a href="services.html" class="hover:text-celeste transition">Servicios</a></li>
+                    <li><a href="services.html#planes" class="hover:text-celeste transition">Nuestros Planes</a></li>
+                    <li><a href="contact.html" class="hover:text-celeste transition">Contacto</a></li>
+                </ul>
             </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6">Legal</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="#" class="hover:text-celeste transition">Privacidad</a></li>
+                    <li><a href="#" class="hover:text-celeste transition">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6">Info Contacto</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3 text-celeste"></i> Calama, Chile
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-celeste"></i> +56 9 XXXX XXXX
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-celeste"></i> contacto@garritasalcielo.cl
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Garritas al Cielo. Todos los derechos reservados. <br> 
+            Hecho con 💖 para acompañar tu duelo. | Creado por <a href="https://vincer.com" target="_blank" class="text-verde font-bold hover:text-celeste transition-colors">Vincer</a>
+            </p>
         </div>
     </footer>
 
