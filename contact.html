@@ -17,31 +17,44 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 w-full z-50 py-4 glass-header">
+    <header class="fixed top-0 w-full z-50 py-4 glass-header transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <span class="text-3xl">🐾</span>
-                <span class="font-bold text-xl tracking-tight text-celeste">GARRITAS <span class="text-verde">AL CIELO</span></span>
+            <a href="index.html" class="flex items-center">
+                <img src="img/logo-garritas-al-cielo-crematorio-de-mascotas.webp" alt="Garritas al Cielo" class="h-12 md:h-16 w-auto transition-all duration-300">
             </a>
+
+            <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-8 font-medium">
                 <a href="index.html" class="hover:text-celeste transition">Inicio</a>
                 <a href="about.html" class="hover:text-celeste transition">Nosotros</a>
                 <a href="services.html" class="hover:text-celeste transition">Servicios</a>
                 <a href="services.html#planes" class="hover:text-celeste transition">Planes</a>
-                <a href="contact.html" class="text-celeste font-bold">Contacto</a>
+                <a href="index.html#ubicacion" class="hover:text-celeste transition">Ubicación</a>
+                <a href="contact.html" class="hover:text-celeste transition font-bold text-celeste">Contacto</a>
             </nav>
+
+            <a href="https://wa.me/56981367749" target="_blank"
+                class="hidden md:block bg-verde text-white px-6 py-2 rounded-full font-semibold btn-hover wa-btn">
+                WhatsApp <i class="fab fa-whatsapp ml-1"></i>
+            </a>
+
+            <!-- Mobile Menu Button -->
             <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute top-full left-0 w-full shadow-xl">
             <nav class="flex flex-col space-y-4 font-medium uppercase text-sm tracking-wider">
-                <a href="index.html">Inicio</a>
-                <a href="about.html">Nosotros</a>
-                <a href="services.html">Servicios</a>
-                <a href="services.html#planes">Planes</a>
-                <a href="contact.html" class="text-celeste">Contacto</a>
-                <a href="https://wa.me/+569XXXXXXXX" target="_blank" class="bg-verde text-white py-3 text-center rounded-lg wa-btn">WhatsApp</a>
+                <a href="index.html" class="hover:text-celeste">Inicio</a>
+                <a href="about.html" class="hover:text-celeste">Nosotros</a>
+                <a href="services.html" class="hover:text-celeste">Servicios</a>
+                <a href="services.html#planes" class="hover:text-celeste">Planes</a>
+                <a href="index.html#ubicacion" class="hover:text-celeste">Ubicación</a>
+                <a href="contact.html" class="hover:text-celeste text-celeste">Contacto</a>
+                <a href="https://wa.me/56981367749" target="_blank"
+                    class="bg-verde text-white py-3 text-center rounded-lg wa-btn">WhatsApp</a>
             </nav>
         </div>
     </header>
@@ -67,7 +80,7 @@
                                 <div>
                                     <h4 class="font-bold text-xl">WhatsApp Directo</h4>
                                     <p class="text-gray-500 mb-2">Para una respuesta inmediata, especialmente en retiros de emergencia.</p>
-                                    <a href="https://wa.me/+569XXXXXXXX" class="text-verde font-bold hover:underline">+56 9 XXXX XXXX</a>
+                                    <a href="https://wa.me/56981367749" class="text-verde font-bold hover:underline">+56 9 8136 7749</a>
                                 </div>
                             </div>
 
@@ -130,14 +143,73 @@
     </section>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/+569XXXXXXXX" target="_blank" class="whatsapp-float wa-btn">
+    <a href="https://wa.me/56981367749" target="_blank" class="whatsapp-float wa-btn">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Simple Footer -->
-    <footer class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400 text-sm">© 2026 Garritas al Cielo. Hecho con amor en Calama, Chile.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12 mb-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center space-x-2 mb-6">
+                    <img src="img/logo-garritas-al-cielo-crematorio-de-mascotas.webp" alt="Garritas al Cielo" class="h-12 w-auto brightness-0 invert">
+                </div>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Ubicados en Calama, Chile. Brindamos paz y amor en el último adiós de quienes más amaste. Un
+                    servicio de corazón para seres especiales.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/garritasalcielo" target="_blank"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-celeste transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@garritas.al.cielo" target="_blank"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6">Navegación</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="index.html" class="hover:text-celeste transition">Inicio</a></li>
+                    <li><a href="about.html" class="hover:text-celeste transition">Sobre Nosotros</a></li>
+                    <li><a href="services.html" class="hover:text-celeste transition">Servicios</a></li>
+                    <li><a href="services.html#planes" class="hover:text-celeste transition">Nuestros Planes</a></li>
+                    <li><a href="contact.html" class="hover:text-celeste transition">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6">Legal</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="#" class="hover:text-celeste transition">Privacidad</a></li>
+                    <li><a href="#" class="hover:text-celeste transition">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6">Info Contacto</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3 text-celeste"></i> Calama, Chile
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-celeste"></i> +56 9 8136 7749
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-celeste"></i> contacto@garritasalcielo.cl
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Garritas al Cielo. Todos los derechos reservados. <br>
+                Hecho con 💖 para acompañar tu duelo. | Creado por <a href="https://vincer.com" target="_blank"
+                    class="text-verde font-bold hover:text-celeste transition-colors">Vincer</a>
+            </p>
         </div>
     </footer>
 
