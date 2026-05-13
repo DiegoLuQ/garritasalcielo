@@ -383,26 +383,78 @@ h1, h2, h3, h4, h5, h6 {
     filter: grayscale(0);
 }
 
-/* --- Alianzas y Convenios Section --- */
-.convenios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+/* --- Alianzas y Convenios Section (Infinite Marquee) --- */
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+    display: flex;
+}
+
+/* Efecto de desvanecimiento (fading edges) en los extremos para un look premium */
+.marquee-container::before,
+.marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 10;
+    pointer-events: none;
+}
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(249, 250, 251, 1), transparent);
+}
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(249, 250, 251, 1), transparent);
+}
+
+.marquee-track {
+    display: flex;
     gap: 2rem;
+    width: max-content;
+    animation: scroll-marquee 40s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .convenio-card {
     position: relative;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     border: 1px solid rgba(135, 206, 235, 0.18);
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: white;
-    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .convenio-card {
+        width: 180px;
+        height: 180px;
+        padding: 1.5rem;
+    }
 }
 
 .convenio-card::after {
